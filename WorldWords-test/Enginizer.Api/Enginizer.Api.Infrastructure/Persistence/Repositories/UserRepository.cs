@@ -28,12 +28,11 @@ namespace Enginizer.Api.Infrastructure.Persistence.Repositories
             return await _enginizerDbContext.Users.ToListAsync();
         }
 
-        public async Task<User> AddAsync(User user)
+        public async Task<int> AddAsync(User user)
         {
             _enginizerDbContext.Users.Add(user);
             await _enginizerDbContext.SaveChangesAsync();
-
-            return user;
+            return user.Id;
         }
 
         public async Task<User> UpdateAsync(User user)

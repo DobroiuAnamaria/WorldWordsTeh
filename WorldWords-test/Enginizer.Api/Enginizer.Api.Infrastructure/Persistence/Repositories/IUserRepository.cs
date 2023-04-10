@@ -6,7 +6,7 @@ namespace Enginizer.Api.Infrastructure.Persistence.Repositories
     {
         Task<List<User>> GetAllAsync();
         Task<User> FindByIdAsync(int id);
-        Task<User> AddAsync(User user);
+        Task<int> AddAsync(User user);
         Task<User> UpdateAsync(User user);
         Task<int> DeleteAsync(int id);
 
