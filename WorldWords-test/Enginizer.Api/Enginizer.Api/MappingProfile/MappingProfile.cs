@@ -9,6 +9,7 @@ namespace Enginizer.Api.MappingProfile
         public MappingProfile()
         {
             CreateMap<User, UserViewModel>();
+            CreateMap<UserViewModel, User>();
         }
     }
 }
