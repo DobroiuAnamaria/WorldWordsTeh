@@ -31,10 +31,9 @@ namespace Enginizer.Api.Core.Services
             return _mapper.Map<UserViewModel>(user);
         }
 
-        public async Task<UserViewModel> AddUserASync(UserViewModel user)
+        public async Task<int> AddUserASync(UserViewModel user)
         {
-            await _userRepository.AddAsync(_mapper.Map<User>(user));
-            return user;
+            return await _userRepository.AddAsync(_mapper.Map<User>(user));
         }
 
         public async Task<UserViewModel> UpdateUserAsync(UserUpdateViewModel request)
