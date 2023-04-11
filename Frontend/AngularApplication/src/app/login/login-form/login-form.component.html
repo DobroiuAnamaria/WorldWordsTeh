@@ -1,0 +1,52 @@
+<form
+  data-toggle="validator"
+  ngForm
+  class="loginForm"
+  (ngSubmit)="onLogin($event)"
+>
+  <div class="credentials-content">
+    <div class="form-group">
+      <label for="identity" class="control-label">Email</label>
+      <input
+        #identityInput
+        id="identity"
+        type="text"
+        class="form-control"
+        [placeholder]="'Email'"
+        name="identity"
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password" class="control-label">Password</label>
+      <input
+        #passwordInput
+        id="password"
+        type="password"
+        class="form-control"
+        [placeholder]="'Password'"
+        name="password"
+        ngModel
+        required
+      />
+    </div>
+  </div>
+  <div class="button-container">
+    <button
+      class="btn btn-success"
+      [disabled]="loginForm?.invalid || isLoading"
+    >
+      Login
+    </button>
+    <button class="btn btn-success">
+      <div class="auth-action-links">
+        <a [routerLink]="'/register'">Register</a>
+      </div>
+    </button>
+  </div>
+  <div class="alert alert-danger" *ngIf="loginError">
+    <strong>Error</strong>
+    Invalid Credentials
+  </div>
+</form>

@@ -1,0 +1,100 @@
+.registerForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registerForm .credentials-content {
+  margin-bottom: 20px;
+}
+
+.registerForm label {
+  font-weight: bold;
+}
+
+.registerForm input[type="text"],
+.registerForm input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.registerForm button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.registerForm button:hover {
+  background-color: #0062cc;
+}
+
+.registerForm .alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.registerForm input[type="email"],
+.registerForm input[type="password"],
+.registerForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.registerForm .form-group {
+  margin-bottom: 20px;
+}
+
+.registerForm .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.registerForm .form-group input[type="password"] {
+  margin-top: 5px;
+}
+
+.registerForm .form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-action-links {
+  text-align: center;
+}
+
+.auth-action-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.auth-action-links a:hover {
+  color: black;
+}

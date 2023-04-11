@@ -1,0 +1,83 @@
+<form
+  data-toggle="validator"
+  ngForm
+  class="registerForm"
+>
+  <div class="register-content">
+    <div class="form-group">
+      <label for="fullName" class="control-label">Full Name</label>
+      <input
+        [(ngModel)]="name"
+        #fullNameInput
+        id="fullName"
+        type="text"
+        class="form-control"
+        [placeholder]="'Full Name'"
+        name="fullName"
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email" class="control-label">Email</label>
+      <input
+      [(ngModel)]="email"
+        #emailInput
+        id="email"
+        type="email"
+        class="form-control"
+        [placeholder]="'Email'"
+        name="email"
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password" class="control-label">Password</label>
+      <input
+      [(ngModel)]="password"
+        #passwordInput
+        id="password"
+        type="password"
+        class="form-control"
+        [placeholder]="'Password'"
+        name="password"
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword" class="control-label"
+        >Confirm Password</label
+      >
+      <input
+      [(ngModel)]="confirmPassword"
+        #confirmPasswordInput
+        id="confirmPassword"
+        type="password"
+        class="form-control"
+        [placeholder]="'Confirm Password'"
+        name="confirmPassword"
+        ngModel
+        required
+      />
+    </div>
+  </div>
+  <div class="button-container">
+    <button
+      (click)="onRegister($event)"
+    >
+      Registerrrr
+    </button>
+    <button class="btn btn-success">
+      <div class="auth-action-links">
+        <a [routerLink]="'/login'">Login</a>
+      </div>
+    </button>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="registerError">
+    <strong>Error</strong>
+    Invalid Registration Details
+  </div>
+</form>
