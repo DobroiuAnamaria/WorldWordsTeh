@@ -1,0 +1,10 @@
+<app-timer (timeout)="onTimeout()" [seconds]="seconds"></app-timer>
+
+<div>
+    <h1>{{word?.description}}</h1>
+</div>
+
+<label>
+    Enter text:
+    <input type="text" [(ngModel)]="enteredText" (keyup)="checkText()">
+</label>

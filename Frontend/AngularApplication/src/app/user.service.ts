@@ -11,7 +11,13 @@ export class UserService {
   constructor(private http: HttpClient, private httpHandler: HttpHandler) { }
 
   register(user: User){
-    return this.http.post<number>(`${UserService.USER_BASE_PATH}`, user);
+    return this.http.post<number>(`${UserService.USER_BASE_PATH}`, {
+      name: user.name,
+      email: user.email,
+      password: user.password,
+      role: "user",
+      points: user.points || 0,
+    });
   }
 
   getUsers() {

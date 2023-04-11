@@ -25,7 +25,7 @@ namespace Enginizer.Api.Controllers
             return Ok(await _wordService.GetWordById(id));
         }
 
-        [HttpGet("/random")]
+        [HttpGet("random")]
         public async Task<ActionResult<WordViewModel>> GetRandomWord()
         {
             return Ok(await _wordService.GetRandomWordAsync());

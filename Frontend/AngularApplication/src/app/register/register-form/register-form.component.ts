@@ -70,13 +70,12 @@ export class RegisterFormComponent implements OnInit {
       password: this.password,
       confirmPassword: this.confirmPassword
     });
-    console.log(data);
     this.blurFormInputs();
     this.isLoading = true;
     // TODO: service.register
     this.userService.register(data).subscribe({
       next: (data) => {
-        console.log(data);
+        this.router.navigate(['home']);
       },
       error: (error) => {
         console.log(error);
