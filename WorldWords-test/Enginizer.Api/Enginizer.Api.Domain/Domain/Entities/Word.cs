@@ -5,7 +5,5 @@
         public int Id { get; set; }
         public string WordName { get; set; }
         public string WordDescription { get; set; }
-
-        
     }
 }

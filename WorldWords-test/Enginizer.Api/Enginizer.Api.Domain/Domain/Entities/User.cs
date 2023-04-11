@@ -10,5 +10,6 @@
 
         public string Password { get; set; }
         public string Role { get; set; }
+        public int Points { get; set; } = 0;
     }
 }
