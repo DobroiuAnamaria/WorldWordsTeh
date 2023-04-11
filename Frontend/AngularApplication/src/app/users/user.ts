@@ -4,6 +4,7 @@ export class User {
     public email: string;
     public password: string;
     public confirmPassword: string;
+    public points: number;
 
     constructor(user: any) {
       this.id = user.id || 0;
@@ -11,5 +12,6 @@ export class User {
       this.email = user.email || '';
       this.password = user.password || '';
       this.confirmPassword = user.confirmPassword || '';
+      this.points = user.points || 0;
     }
   }

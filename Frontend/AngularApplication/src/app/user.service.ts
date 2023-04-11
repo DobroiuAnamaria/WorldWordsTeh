@@ -11,7 +11,10 @@ export class UserService {
   constructor(private http: HttpClient, private httpHandler: HttpHandler) { }
 
   register(user: User){
-    console.log(user);
     return this.http.post<number>(`${UserService.USER_BASE_PATH}`, user);
+  }
+
+  getUsers() {
+    return this.http.get<User[]>(`${UserService.USER_BASE_PATH}`);
   }
 }

@@ -11,6 +11,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './table/table.component';
+import { TableModule } from 'primeng/table';
+import { HomeComponent } from './home/home.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,8 +24,10 @@ import { FormsModule } from '@angular/forms';
     LoginFormComponent,
     RegisterComponent,
     RegisterFormComponent,
+    TableComponent,
+    HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, TableModule, ToastrModule.forRoot()],
   providers: [UserService, HttpClient],
   bootstrap: [AppComponent],
 })
