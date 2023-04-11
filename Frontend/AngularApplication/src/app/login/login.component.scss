@@ -1,0 +1,38 @@
+.auth-action-links {
+  margin-top: 10rem;
+}
+
+.auth-action-links a {
+  margin: 0 1rem;
+}
+
+.language-flags {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 50px;
+    margin-left: 20px;
+  }
+}
+
+:host::ng-deep {
+  .modal {
+    height: 60% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    .modal-body {
+      margin: 2rem auto;
+      width: 90%;
+    }
+
+    .modal-footer {
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
+}
