@@ -1,0 +1,23 @@
+/* Styles for the container element */
+div {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  /* Styles for the link elements */
+  a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Hover styles for the link elements */
+  a:hover {
+    background-color: #ccc;
+    color: #fff;
+    border-color: transparent;
+  }

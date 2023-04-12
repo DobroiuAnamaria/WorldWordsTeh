@@ -35,6 +35,7 @@
   <div class="button-container">
     <button
       class="btn btn-success"
+      (click)="login()"
       [disabled]="loginForm?.invalid || isLoading"
     >
       Login

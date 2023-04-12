@@ -1,0 +1,32 @@
+ /* Set the font family and size for the whole page */
+ body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Center the app-timer component horizontally */
+app-timer {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style the heading inside the <div> element */
+div h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Style the label and the input */
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+label input {
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+}

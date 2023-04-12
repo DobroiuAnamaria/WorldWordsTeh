@@ -1,4 +1,29 @@
+/* Styles for the container element */
 .center {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-}
+  }
+
+  /* Styles for the table */
+  .p-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  /* Styles for the table header */
+  .p-table th {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* Styles for the table body */
+  .p-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }

@@ -7,6 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -31,7 +32,7 @@ export class LoginFormComponent implements OnInit {
 
   loginForm: FormGroup | undefined;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -53,5 +54,9 @@ export class LoginFormComponent implements OnInit {
     if (this.passwordInput) {
       this.passwordInput.nativeElement.blur();
     }
+  }
+
+  login() {
+    this.router.navigate(['home']);
   }
 }
