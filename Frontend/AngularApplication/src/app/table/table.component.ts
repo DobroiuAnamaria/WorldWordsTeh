@@ -33,7 +33,8 @@ export class TableComponent implements OnInit{
   }
 
   private mapToTableUser(users: User[]): TableUser[] {
-    const mappedUsers = users.map(user => new TableUser(users.indexOf(user) + 1, user.name, user.points));
-    return mappedUsers.sort((a, b) => b.points - a.points);
+    const sortedUsers = users
+    .sort((a, b) => b.points - a.points);
+    return sortedUsers.map(user => new TableUser(sortedUsers.indexOf(user) + 1, user.name, user.points));
   }
 }

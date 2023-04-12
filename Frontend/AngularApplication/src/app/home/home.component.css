@@ -21,3 +21,8 @@ div {
     color: #fff;
     border-color: transparent;
   }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }

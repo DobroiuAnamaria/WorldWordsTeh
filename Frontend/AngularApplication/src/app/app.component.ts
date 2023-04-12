@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WorldWords';
-  welcome = "Welcome  in to the game !"; 
+  welcome = "Welcome  into the game !"; 
 }

@@ -24,26 +24,27 @@ export class ProfileComponent implements OnInit{
     this.userService.getUsers().subscribe({
       next: (data) => {
         this.user = data[0];
+
+        const points = this.user.points;
+    
+        if (points >= 0) {
+          this.badges.push("none");
+        }
+    
+        if(points >= 5) {
+          this.badges.push("bronze");
+        }
+    
+        if(points >= 30) {
+          this.badges.push("silver");
+        }
+    
+        if(points >= 100) {
+          this.badges.push("gold");
+        }
       }
     });
 
-    const points = this.user.points;
-
-    if (points >= 0) {
-      this.badges.push("none");
-    }
-
-    if(points > 20) {
-      this.badges.push("bronze");
-    }
-
-    if(points > 50) {
-      this.badges.push("silver");
-    }
-
-    if(points > 100) {
-      this.badges.push("gold");
-    }
   }
 
 }
