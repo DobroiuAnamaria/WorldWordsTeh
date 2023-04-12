@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Azure.Core;
 using Enginizer.Api.Core.Contracts;
 using Enginizer.Api.Core.Models.ViewModels.User;
 using Enginizer.Api.Domain.Domain.Entities;
@@ -46,6 +47,7 @@ namespace Enginizer.Api.Core.Services
             user.Name = request.Name;
             user.Email = request.Email;
             user.Password = request.Password;
+            user.Points = request.Points;
 
             await _userRepository.UpdateAsync(user);
             return _mapper.Map<UserViewModel>(user);
@@ -54,6 +56,14 @@ namespace Enginizer.Api.Core.Services
         public async Task<int> DeleteUserAsync(int id)
         {
             return await _userRepository.DeleteAsync(id);
+        }
+
+        public async Task<UserViewModel> UpdatePoints(int id, int points)
+        {
+            var user = await _userRepository.FindByIdAsync(id);
+            user.Points = points;
+            await _userRepository.UpdateAsync(user);
+            return _mapper.Map<UserViewModel>(user);
         }
     }
 }

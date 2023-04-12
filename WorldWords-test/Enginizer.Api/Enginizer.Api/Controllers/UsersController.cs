@@ -37,8 +37,8 @@ namespace Enginizer.Api.Controllers
             return Ok(await _userService.AddUserASync(user));
         }
 
-        [HttpPut]
-        public async Task<ActionResult<UserViewModel>> Update(UserUpdateViewModel user)
+        [HttpPut()]
+        public async Task<ActionResult<UserViewModel>> Update([FromBody] UserUpdateViewModel user)
         {
             return Ok(await _userService.UpdateUserAsync(user));
         }
@@ -47,6 +47,12 @@ namespace Enginizer.Api.Controllers
         public async Task<ActionResult<int>> Delete(int id)
         {
             return Ok(await _userService.DeleteUserAsync(id));
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<ActionResult<UserViewModel>> UpdatePoints(int id, [FromBody] int points)
+        {
+            return Ok(await _userService.UpdatePoints(id, points));
         }
     }
 }

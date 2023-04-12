@@ -20,6 +20,10 @@ export class UserService {
     });
   }
 
+  updatePoints(id: number, points: number) {
+    return this.http.patch<User>(`${UserService.USER_BASE_PATH}/${id}`, points);
+  }
+
   getUsers() {
     return this.http.get<User[]>(`${UserService.USER_BASE_PATH}`);
   }

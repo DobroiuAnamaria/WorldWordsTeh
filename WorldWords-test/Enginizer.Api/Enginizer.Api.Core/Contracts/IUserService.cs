@@ -9,5 +9,6 @@ namespace Enginizer.Api.Core.Contracts
         Task<int> AddUserASync(UserViewModel user);
         Task<UserViewModel> UpdateUserAsync(UserUpdateViewModel user);
         Task<int> DeleteUserAsync(int id);
+        Task<UserViewModel> UpdatePoints(int id, int points);
     }
 }
